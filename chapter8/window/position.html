@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fn()">移动</button>
+    <script>
+        //获取浏览器窗口相对于电脑屏幕位置
+        var leftPos=(typeof window.screenLeft=='number')?window.screenLeft:window.screenX;
+        var topPos=(typeof window.screenTop=='number')?window.screenTop:window.screenY;
+        console.log(leftPos,topPos);     
+
+        function fn() {
+            // window.moveTo(0,0);//移动到(0,0)
+            // console.log(leftPos,topPos);
+
+            window.moveBy(0,100);//向下移动100px
+            console.log(leftPos,topPos);
+        }   
+    </script>
+</body>
+</html>

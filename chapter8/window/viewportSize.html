@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //无法确定浏览器窗口本身的大小，但是可以获得页面视口(viewport 可视区)的大小
+        var pageWidth=window.innerWidth;
+        var pageHeight=window.innerHeight;
+
+        if(typeof pageWidth != 'number'){
+            if(document.compatMode == 'CSS1Compat'){
+                pageWidth=document.documentElement.clientWidth;
+                pageHeight=document.documentElement.clientHeight;
+            }
+            else{
+                pageWidth=document.body.clientWidth;
+                pageHeight=document.body.clientHeight;
+            }
+        }
+
+        console.log(pageWidth,pageHeight);
+    </script>
+</body>
+</html>

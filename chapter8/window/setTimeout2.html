@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //最好不要用setInterval，而是用 setTimeout 去实现setInterval
+        var num=0;
+        var max=10;
+
+        function incrementNumber(){
+            num++;
+
+            if(num<max){
+                setTimeout(incrementNumber,500);
+            }
+            else{
+                alert("Done");
+            }
+        }
+
+        setTimeout(incrementNumber,500);
+    </script>
+</body>
+</html>

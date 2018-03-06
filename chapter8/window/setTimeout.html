@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="begin()">开始</button>
+    <span id="num"></span>
+    <button onclick="stop()">停止</button>
+    <script>
+        var oNum=document.getElementById('num');
+        var iNumber=0;
+        var timer=null;
+
+        window.onload=function(){
+            oNum.innerHTML=iNumber;
+        }
+
+        function begin(){
+            timer=setTimeout(function(){
+                iNumber++;
+                oNum.innerHTML=iNumber;
+            },1000);
+        }
+        function stop(){
+            clearTimeout(timer);
+        }
+    </script>
+</body>
+</html>

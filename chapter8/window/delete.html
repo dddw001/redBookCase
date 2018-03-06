@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age=20;
+        window.color='red';
+        //ie8及更早版本遇到delete 删除window属性的语句时，
+        //不管该属性是如何创建的，都会抛出错误。
+        delete window.age;//false
+        delete window.color;//return true
+
+        //尝试访问未声明的变量会报错，但通过查询window对象，可以知道某个变量是否存在
+        var val1=val2;//error
+        var val1 =window.val2;//val1=undefined
+    </script>
+</body>
+</html>

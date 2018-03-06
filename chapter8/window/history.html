@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //history对象保存着用户上网的历史记录，从窗口被打开的那一刻算起
+        //在创建自定义的前进后退按钮，检测当前页面是否是历史记录中的第一个页面，使用history对象
+        history.go(-1);//后退一页
+        history.go(1);//前进一页
+        history.go('bai');//跳转到最近的包含 'bai' 的页面
+        history.back();//后退一页
+        history.forward();//前进一页
+    </script>
+</body>
+</html>
