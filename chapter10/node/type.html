@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if(someNode.nodeType==Node.ELEMENT_NODE){//在iez中无效
+            alert('the node is an element');
+        }
+
+        if(someNode.nodeType==1){//适用于所有浏览器
+            alert('the node is an element');            
+        }
+    </script>
+</body>
+</html>

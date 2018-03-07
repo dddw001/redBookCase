@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var oTable=document.getElementById('table1');
+        var oBody=oTable.tBodies[0];
+        var aRow=oBody.rows;
+        oBody.deleteRow(pos);
+        var newRow=oBody.insertRow(pos);
+        var aCell=aRow.cells;
+        var newCell=aRow.insertCell(pos);
+        aRow.deleteCell(pos);
+    </script>
+</body>
+</html>

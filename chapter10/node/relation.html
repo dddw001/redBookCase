@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var firstChild=someNode.childNodes[0];
+        var secondChild=someNode.childNodes.item(1);
+        var count=someNode.childNodes.length;
+
+        if(someNode.nextSibling===null){
+            alert("the node is the last node");
+        }
+        else if(someNode.prevSibling===null){
+            alert("the node is the first node");
+        }
+
+        //操作节点
+        var returnNode=someNode.appendChild(someNode.firstChild);
+        alert(returnNode==someNode.firstChild);//false
+        alert(returnNode==someNode.lastChild);//true
+
+        var returnNode2=someNode.insertBefore(newNode,null);
+        alert(newNode==someNode.lastChild);//true
+        var returnNode3=someNode.insertBefore(newNode,someNode.firstChild);
+        alert(returnNode==newNode);//true
+        alert(newNode==someNode.firstChild);//true
+
+        var returnNode4=someNode.removeChild(someNode.firstChild);
+
+        var deepList=myList.cloneNode(true);//深复制 复制了子节点
+        var shallowList=myList.cloneNode(false);//浅复制 默认是false
+
+        someNode.normalize();//移除空白文本节点，连接相邻文本节点
+    </script>
+</body>
+</html>

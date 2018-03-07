@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //nodeType=9
+
+        var html=document.documentElement;
+        console.log(html===document.childNodes[0]);//true
+        console.log(html===document.firstChild);//true
+
+        var body=document.body;
+
+        var doctype=document.doctype;
+
+        var title=document.title;
+        document.title='my title';
+
+        var url=document.URL;
+        var domain=document.domain;
+        var referrer=document.referrer;
+        domain='bail.com';//只能从紧绷到松散
+
+        //查找元素
+        var oDiv=document.getElementById('...');
+        var aDiv=document.getElementsByTagName('...');
+        aDiv[0]||aDiv.item(0)
+        aDiv.namedItem('...')||aDiv["objName"]//根据name
+        document.getElementsByName('...');//获取单选按钮
+
+        document.anchors();//带name的<a>
+        document.forms();//<form>
+        document.images();//<img>
+        document.links();//带href的<a>
+    </script>
+</body>
+</html>
