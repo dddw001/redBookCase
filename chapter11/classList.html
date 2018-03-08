@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p class="db user disabled"></p>
+    <script>
+        var oP=document.getElementsByTagName('p')[0];
+        var str="user";
+
+        function change(obj,str){
+            var aClassName=obj.className.split(/\s+/);
+            var pos=-1;
+            var len=aClassName.length;
+
+            for(var i=0;i<len;i++){
+                if(aClassName[i]==str){
+                    pos=i;
+                    break;
+                }
+            }
+            
+            aClassName.splice(i,1);
+            obj.className=aClassName.join(" ");
+        }
+
+        change(oP,str);
+    </script>
+</body>
+</html>

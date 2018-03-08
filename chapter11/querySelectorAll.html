@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" class="myDiv">div1</div>
+    <div class="myDiv">div2</div>
+    <script>
+        /*querySelectorAll()返回的是一个数组*/
+        console.log(document.querySelectorAll('#div1')[0]);
+        console.log(document.querySelectorAll('.myDiv'));
+    </script>
+</body>
+</html>
