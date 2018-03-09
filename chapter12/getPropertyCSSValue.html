@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        var oDiv=document.getElementById("div1");
+        oDiv.style.backgroundColor="red";
+        oDiv.style.width="100px";
+        oDiv.style.height="100px";
+        oDiv.style.border="1px solid black";
+        for(var i=0;i<oDiv.style.length;i++){
+            let prop=oDiv.style[i];
+            let value=oDiv.style.getPropertyCSSValue(prop);
+            console.log(prop,value.cssText,value.cssValueType);
+        }
+        //Uncaught TypeError:oDiv.style.getPropertyCSSValue is not a function
+    </script>
+</body>
+</html>
