@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="location" id="select1">
+        <option value="option1">choose1</option>
+        <option value="">choose2</option>
+        <option>choose3</option>
+    </select>
+    <script>
+        var oSelect=document.getElementById("select1");
+        var newOption=new Option("new choose","new select");
+        oSelect.appendChild(newOption);
+    </script>
+</body>
+</html>

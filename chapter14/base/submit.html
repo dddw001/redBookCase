@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../eventUtil.js"></script>
+</head>
+<body>
+    <form action="#" id="form1" name="myForm">
+        <input type="text"/>
+        <!--通用提交按钮-->
+        <input type="submit" value="Submit Form"/>
+        <!--自定义提交按钮-->
+        <button type="submit">Submit Form</button>
+        <!--图像按钮-->
+        <input type="image" src="pic.png"/>
+    </form>
+    <script>
+        var oForm=document.getElementById("form1");
+        EventUtil.addHandler(oForm,"submit",function(event){
+            event=EventUtil.getEvent(event);
+            EventUtil.preventDefault(event);
+        })
+
+        oForm.submit();
+    </script>
+</body>
+</html>

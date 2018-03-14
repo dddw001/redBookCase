@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" id="form1">
+        <ul>
+            <li><input type="radio" name="color" value="red">Red</li>
+            <li><input type="radio" name="color" value="green">Green</li>
+            <li><input type="radio" name="color" value="blue">Blue</li>            
+        </ul>
+    </form>
+    <script>
+        var oForm=document.getElementById("form1");
+        
+        //取得表单中的第一个字段
+        var field1=oForm.elements[0];
+        //取得名为color的字段
+        var aColor=oForm.elements["color"];
+        //取得表单中包含字段的数量
+        var iFieldCount=oForm.elements.length;
+
+        
+    </script>
+</body>
+</html>
