@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200">A drawing of something</canvas>
+    <script>
+        var oCanvas=document.getElementById("myCanvas");
+        //确定浏览器支持canvas元素
+        if(oCanvas.getContext){
+            var context=oCanvas.getContext("2d");
+            
+            var image=document.images[0];
+            //(img,x,y)
+            context.drawImage(image,10,10);
+            //(img,x,y,width,height)
+            context.drawImage(image,50,10,20,30);
+            //(img,x1,y1,width1,height1,x2,y2,width2,height2)
+            context.drawImage(image,0,10,50,50,0,100,40,60);
+        }
+    </script>
+</body>
+</html>

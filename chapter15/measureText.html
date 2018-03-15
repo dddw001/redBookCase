@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="140" height="200">A drawing of something</canvas>
+    <script>
+        var oCanvas=document.getElementById("myCanvas");
+        //确定浏览器支持canvas元素
+        if(oCanvas.getContext){
+            var context=oCanvas.getContext("2d");
+            var fontSize=100;
+            context.font=fontSize+"px Arial";
+            //在一个140px宽的矩形中绘制文本
+            while(context.measureText("Hello World").width>140){
+                fontSize--;
+                context.font=fontSize+"px Arial";
+            }
+            context.fillText("Hello World",0,30);
+            context.fillText("fontsize:"+fontSize+"px",0,50);
+        }
+    </script>
+</body>
+</html>

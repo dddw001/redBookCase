@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200">A drawing of something</canvas>
+    <script>
+        var oCanvas=document.getElementById("myCanvas");
+        //确定浏览器支持canvas元素
+        if(oCanvas.getContext){
+            var context=oCanvas.getContext("2d");
+            
+            //绘制红色描边矩形
+            context.strokeStyle="red";
+            //矩形的x坐标，矩形的y坐标，矩形的宽度，矩形的高度
+            context.strokeRect(10,10,50,50);
+
+            //绘制半透明的蓝色描边矩形
+            context.strokeStyle="rgba(0,0,255,0.5)";
+            context.strokeRect(30,30,50,50);
+        }
+    </script>
+</body>
+</html>

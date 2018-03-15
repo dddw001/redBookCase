@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{border: 1px solid black;}
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200">A drawing of something</canvas>
+    <script>
+        var oCanvas=document.getElementById("myCanvas");
+        //确定浏览器支持canvas元素
+        if(oCanvas.getContext){
+            var context=oCanvas.getContext("2d");
+            //(x1,y1,r1,x2,y2,r2);
+            var gradient=context.createRadialGradient(55,55,10,55,55,30);
+            gradient.addColorStop(0,"white");
+            gradient.addColorStop(1,"black");
+
+            //绘制红色矩形
+            context.fillStyle="red";
+            context.fillRect(10,10,50,50);
+            //绘制渐变矩形
+            context.fillStyle=gradient;
+            context.fillRect(30,30,50,50);
+        }
+    </script>
+</body>
+</html>
