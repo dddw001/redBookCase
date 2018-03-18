@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var book={
+            title:"my title",
+            authors:"cdx",
+            year:2018
+        }
+        var jsonText=JSON.stringify(book);
+        var str=JSON.parse(jsonText);
+        console.log(typeof str);//Object
+        console.log(str);
+    </script>
+</body>
+</html>

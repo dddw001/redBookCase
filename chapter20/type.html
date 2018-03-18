@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var json1="hello,world";
+        console.log(json1);
+
+        var json2={
+            "name":"ha",
+            "sex":"woman"
+        }
+        console.log(json2.name);//ha
+        console.log(json2["name"]);//ha
+
+        var json3=[
+            {
+                "name":"ha",
+                "sex":"woman"
+            },
+            {
+                "name":"hei",
+                "sex":"man"
+            }
+        ]
+        console.log(json3[0].name);//ha
+    </script>
+</body>
+</html>
